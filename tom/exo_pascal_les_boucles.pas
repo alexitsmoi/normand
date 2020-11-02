@@ -1,0 +1,146 @@
+
+program exo_pascal_les_boucles;
+
+uses crt;
+
+VAR
+	rebours{exo 3},n{exo 4},nxt,suite,i{exo 6 et 7},table,ent,prod{exo 8},somme,nombre{exo 9},produit,n1{exo 10 + nombre}:integer;
+	nmbr{exo 5}:real;
+
+
+BEGIN
+
+	clrscr;
+	
+//exo 3:
+//BUT : faire un compte à rebours sur le nombre de photocopie
+//ENTREE : Nombre de copie de base
+//SORTIE : Lancer l’impression
+
+	{writeln('veuillez entrer le nombre de copie a imprimer');
+	readln(rebours);
+	while(rebours <> 0) do
+		BEGIN
+			rebours := (rebours - 1);
+			writeln(rebours);
+		END;	
+		writeln('C:\Rapport.txt',0);
+
+
+//exo 4:
+//BUT : Devinez le nombre correct
+//ENTREE : entre un nombre entre 1 et 3
+//SORTIE : quand le nombre est trouvé
+
+	n:=0;
+	writeln('Veuillez saisir un nombre entre 1 et 3');
+	readln(n);
+	while((n<1) or (n>3)) do
+		writeln(n);
+		writeln('Veuillez saisir un nombre entre 1 et 3');
+		readln(n);
+
+//exo 5:
+//BUT faire un programme
+//ENTREE nombre
+//SORTIE afficher nombre
+
+	writeln('Veuillez entrez un nombre entre 10 et 20');
+	repeat
+		BEGIN
+			readln(nmbr);
+			if(nmbr>20)then
+				writeln('trop grand')
+			else if(nmbr<10)then
+					writeln('trop petit');
+		END;			
+	until((nmbr<10) and (nmbr>20));
+
+//exo 6:											
+//but : afficher la suite les dix prochaines valeurs suivant la valeur
+// entrée : une valeur
+//Sortie : les dix prochaines valeur
+
+	writeln('Ecrire la valeur de depart');
+	readln(nxt);							
+	while(suite<=10) do
+    BEGIN
+		writeln(nxt);
+		nxt:= nxt + 1;
+		suite:= suite + 1;
+	END;
+
+//exo 7:
+//but : afficher la suite des dix prochaines valeurs suivant la valeur
+// entrée : une valeur
+//Sortie : les dix prochaines valeurs
+
+	writeln('Ecrire la valeur de depart');
+	readln(nxt);
+	suite:=1;
+	for i:=1 to 10 do
+	BEGIN
+		nxt:=nxt + suite;
+		writeln(nxt);
+	END;
+
+//exo 8 :
+//BUT = “écrire la table de multiplication de la valeur“
+//entrée = une valeur
+//sortie = la table de la valeur rentrée
+
+	writeln('Veuillez entrer une valeur pour calculer sa table de multiplication');
+	readln(table);
+	ent:=1;
+	while(ent<>11) do
+	BEGIN
+		prod:=table * ent;
+		writeln(table,'*',ent,'=',prod);
+		ent:=ent+1;
+	END;	
+
+//exo 9:
+//BUT : la somme de la décomposition de la valeur
+// entrée : une valeur entière
+// sortie la décomposition et le résultat
+
+	writeln('Veuillez entrer une valeur');
+	readln(nombre);
+	somme:=nombre;
+	while(nombre<>0) do
+	BEGIN
+		nombre:= nombre - 1;
+		somme:= somme + nombre;
+	END;
+	writeln('la somme est de ', somme);	
+
+//exo 10:
+//BUT : la factorielle de la décomposition de la valeur
+// entrée : une valeur entière
+// sortie la décomposition et le résultat
+
+	writeln('Veuillez entrer une valeur');
+	readln(nombre);
+	n1:= nombre;
+	produit:= nombre * produit;
+	produit:= 1;
+	while(nombre<>0) do
+	BEGIN
+		produit:= nombre * produit;
+		nombre:= nombre - 1;
+	END;
+	writeln('la factorielle de ', n1 ,' est ', produit);}
+
+//exo 11:
+
+
+
+	writeln('Press Entrez pour quitter');
+	readln;
+	
+
+
+END.
+
+
+
