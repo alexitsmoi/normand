@@ -1,0 +1,18 @@
+program algo_x;
+
+uses crt;
+
+VAR
+    ligne, colonne, nbcol :integer;
+BEGIN
+    nbcol := 0; 
+    for ligne := 1 to 4 do 
+    begin 
+        for colonne := 1 to nbcol do 
+        begin
+            writeln('*'); 
+            nbcol := 2*nbcol; 
+        end; 
+    end;
+    readln();
+END.
