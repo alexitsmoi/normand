@@ -1,0 +1,53 @@
+Algorithme essai_fonction
+
+Const N<-100 :Entier
+
+fonction Somme :Entier
+
+Var 
+    i, s : entier
+
+DEBUT
+				
+	s<-0
+
+	POUR i DE 1 A N FAIRE PAS DE 1
+		s  <-s + i
+	FINPOUR
+
+ 	Somme<-s
+
+FINPROCEDURE
+
+fonction Somme_2(nb_i:Entier) :Entier
+
+Var 
+    i, s : entier
+
+DEBUT
+				
+	s<-0
+
+	POUR i DE 1 A nb_i FAIRE PAS DE 1
+		s  <-s + i
+	FINPOUR
+
+ 	Somme_2<-s
+
+FINPROCEDURE
+
+Var
+
+	res_Somme:ENTIER
+	nb_i:entier
+
+//Programme principal		
+DEBUT 
+	//Instructions
+	Ecrire("Saisir un entier : ")
+	lire(nb_i)
+	res_Somme<-Somme_2(nb_i)
+
+	Ecrire("Le res de la somme de nb_i nombre est : "+ res_Somme)
+
+FIN
