@@ -1,0 +1,47 @@
+
+
+program algo_pendu;
+
+uses crt;
+
+CONST
+    VOID='-';
+
+VAR
+    mot,mot_void:string;
+    car:char;
+    i,j,ent:integer;
+BEGIN
+    clrscr;
+    writeln('veuillez saisir le mot a chercher');//maman
+    readln(mot);
+
+    ent:=length(mot);// ent = 5
+    mot_void:='a';//on initialise la chaine de caractere
+    FOR i:=1 to ent DO
+    BEGIN
+        mot_void[i]:=VOID;
+        writeln(mot_void);
+    END;
+    //deuxieme partie
+    clrscr;
+    FOR i:=1 to ent DO
+    BEGIN
+        writeln('Veuillez saisir une lettre');
+        readln(car);
+        FOR j:=1 to ent DO
+        BEGIN
+            IF (mot[j]=car)THEN
+            BEGIN
+                write('OK');
+                mot_void[j]:=car;
+            END    
+            ELSE
+                mot_void[j]:=VOID;
+                write('NONE');
+        END;
+        //writeln(mot_void);
+        readln;
+    END;
+END.
+

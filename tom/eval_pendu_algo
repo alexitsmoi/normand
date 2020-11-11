@@ -1,0 +1,149 @@
+Eval_pendu_algo :
+//BUT: créer un jeu du pendu
+//ENTREE:mot et lettre saisie par l'utilisateur
+//SORTIE:victoire ou defaite si le mot est trouvée ou pas
+
+VAR:
+	mot,base : CHAINE
+	lettre : CAR
+	ent,i,j,intru,restant,perdu : INTEGER
+
+FONCTION AffichagePendu(perdu:ENTIER) : CHAINE
+DEBUT
+	SI perdu = 1 alors
+	DEBUT
+		ECRIRE ""
+    	ECRIRE ""
+    	ECRIRE ""
+    	ECRIRE ""
+    	ECRIRE "__"
+    FIN
+    SI perdu = 2 ALORS
+      DEBUT
+        ECRIRE ""
+        ECRIRE "|"
+        ECRIRE "|"
+        ECRIRE "|"
+        ECRIRE "|__"
+      FIN
+      SI perdu = 3 ALORS
+        DEBUT
+          ECRIRE "______"
+          ECRIRE "|"
+          ECRIRE "|"
+          ECRIRE "|"
+          ECRIRE "|__"
+        FIN
+        SI perdu = 4 ALORS
+          DEBUT
+            ECRIRE "______"
+            ECRIRE "| "  |
+            ECRIRE "|"
+            ECRIRE "|"
+            ECRIRE "|__"
+          FIN
+          SI perdu = 5 ALORS
+            DEBUT
+              ECRIRE "______"
+              ECRIRE "|   |"
+              ECRIRE "|   0"
+              ECRIRE "|"
+              ECRIRE "|__"
+            FIN
+            SI perdu = 6 ALORS
+              DEBUT
+                ECRIRE "______"
+                ECRIRE "|   |"
+                ECRIRE "|   0"
+                ECRIRE "|   |"
+                ECRIRE "|__"
+              FIN
+              SI perdu = 7 ALORS
+                DEBUT
+                  ECRIRE "______"
+                  ECRIRE "|   |"
+                  ECRIRE "|   0"
+                  ECRIRE "|  /|"
+                  ECRIRE "|__"
+                FIN
+                SI perdu = 8 ALORS
+                  DEBUT
+                    ECRIRE "______"
+                    ECRIRE "|   |"
+                    ECRIRE "|   0"
+                    ECRIRE "|  /|\"
+                    ECRIRE "|__"
+                  FIN
+                  SI perdu = 9 ALORS
+                    DEBUT
+                      ECRIRE "______"
+                      ECRIRE "|   |"
+                      ECRIRE "|   0"
+                      ECRIRE "|  /|\"
+                      ECRIRE "|__/"
+                    FIN
+                    SI perdu = 10 ALORS
+                      DEBUT
+                    	ECRIRE "______"
+                        ECRIRE "|   |"
+                        ECRIRE "|   0"
+                        ECRIRE "|  /|\"
+                        ECRIRE "|__/ \"
+                        ECRIRE "Vous avez perdu"
+                      FIN
+FIN
+
+FONCTION Question(lettre:CAR):CHAINE
+DEBUT
+  REPETER
+  DEBUT           
+    ECRIRE "Choisissez un lettre"
+    LIRE lettre 
+    intru <- 0
+    POUR j DE 1 A ent FAIRE
+      DEBUT
+        SI lettre = mot[j] ALORS
+          DEBUT   
+            SI base[j] = "-" ALORS
+              DEBUT
+                base[j] <- lettre                 
+                intru <- intru + 1
+              FIN
+          FIN
+          ECRIRE base[j]
+    FIN
+    ECRIRE()
+    SI intru = 0 ALORS
+      DEBUT
+        perdu <- perdu + 1
+      FIN
+      ECRIRE AffichagePendu perdu  
+    FIN
+    JUSQUA mot = base OU perdu = 10
+    SI perdu=10 ALORS
+      DEBUT
+        ECRIRE "vous avez perdu"
+        LIRE
+      FIN
+FIN
+
+
+DEBUT //programme principale
+  perdu := 0
+  ECRIRE "Saisissez un mot"
+  LIRE mot
+  ent <- LONGUEUR mot
+  restant <- ent
+  base <- mot   
+  POUR i DE 1 A ent FAIRE
+    DEBUT
+      base[i] <- "-"
+    FIN
+    ECRIRE base
+    ECRIRE Question lettre
+    SI perdu<10 ALORS
+      DEBUT
+        ECRIRE "VOUS AVEZ GAGNE"
+        LIRE
+      FIN
+FIN.
