@@ -1,0 +1,30 @@
+ALGORITHME : purge_caractere
+//BUT : faire une fonction qui purge une chaine d un caractere
+//ENTREE: 
+//SORTIE:
+
+
+
+VAR
+	chaine_source,temp_chaine:chaine
+	car_a_sup,car_temp:caractere
+	ent,i:entier
+
+DEBUT
+	ECRIRE("Veuillez entrer un mot/une phrase")
+	LIRE (chaine_source)
+	ECRIRE ("Veuillez saisir le caractere a supprimer")
+	LIRE (car_a_sup)
+	ent<-LONGUEUR(chaine_source)
+	POUR i DE 1 a ent FAIRE
+	DEBUT
+		SI (car_temp<-EXTRACTION(chaine_source,i)<>car_a_sup) ALORS
+			temp_chaine<-temp_chaine+car_temp
+		FINSI
+	FINPOUR
+	ECRIRE(temp_chaine)
+FIN.	
+		
+
+
+

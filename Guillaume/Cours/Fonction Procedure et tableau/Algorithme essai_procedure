@@ -1,0 +1,53 @@
+Algorithme essai_procedure
+
+Const N<-100 :Entier
+
+
+
+Procedure Somme
+
+Var 
+    i, s : entier
+
+DEBUT
+				
+	s<-0
+
+	POUR i DE 1 A N FAIRE PAS DE 1
+		s  <-s + i
+	FINPOUR
+
+ 	Ecrire("La somme des "+ N + "premiers nombres est "+ s) 
+
+FINPROCEDURE
+
+
+Procedure Somme_2(nb_i:entier)
+
+Var 
+    i, s : entier
+
+DEBUT
+				
+	s<-0
+
+	POUR i DE 1 A nb_i FAIRE PAS DE 1
+		s  <-s + i
+	FINPOUR
+
+ 	Ecrire("La somme des "+ nb_i + " premiers nombres est "+ s) 
+
+FINPROCEDURE
+
+
+
+Var
+	nb_i:entier
+
+//Programme principal		
+DEBUT 
+	//Instructions
+	Ecrire("Saisir un entier : ")
+	lire(nb_i)
+	somme_2(nb_i) 
+FIN

@@ -1,0 +1,168 @@
+//exo1
+Algo: exercie_fonctions_et_procédure
+//but: tester la fonction somme
+//entree:saisir 5 nombre
+//srotis:afficher la somme des 5 nombres
+VAR
+	resultat:ENTIER
+
+FONCTION SOMME:ENTIER;
+
+	VAR
+		nb1,nb2,nb3,nb4,nb5:ENTIER
+	DEBUT
+		ECRIRE"veuillez saisir 1 nombre"
+		lire nb1
+		ECRIRE"veuillez saisir 1 nombre"
+		lire nb2
+		ECRIRE"veuillez saisir 1 nombre"
+		lire nb3
+		ECRIRE"veuillez saisir 1 nombre"
+		lire nb4
+		ECRIRE"veuillez saisir 1 nombre"
+		lire nb5
+		SOMME<-nb1+nb2+nb3+nb4+nb5
+	FIN FONCTION
+
+	//PROG PRINCIPALE
+DEBUT
+	résultat<-SOMME
+	ECRIRE"Le résultat est"+resultat
+FIN
+
+//Exo 2
+Algo: exercice_fonctions_et_procédure
+//but: tester la fonction somme
+//entree:saisir 5 nombre
+//srotis:afficher la somme des 5 nombres
+VAR
+    resultat:ENTIER
+
+PROCEDURE SOMME;
+
+    VAR
+        nb1,nb2,nb3,nb4,nb5:ENTIER
+    DEBUT
+        ECRIRE"veuillez saisir 1 nombre"
+        lire nb1
+        ECRIRE"veuillez saisir 1 nombre"
+        lire nb2
+        ECRIRE"veuillez saisir 1 nombre"
+        lire nb3
+        ECRIRE"veuillez saisir 1 nombre"
+        lire nb4
+        ECRIRE"veuillez saisir 1 nombre"
+        lire nb5
+        resultat<-nb1+nb2+nb3+nb4+nb5
+        ECRIRE"Le résultat est"+resultat
+    FIN PROCEDURE
+DEBUT
+    SOMME;
+FIN
+
+
+//Exo3
+Algo: exercie_fonctions_et_procédure
+//but: tester la fonction somme
+//entree:saisir 5 nombre
+//srotis:afficher la somme des 5 nombres
+
+
+FONCTION SOMME(nb1,nb2,nb3,nb4,nb5:ENTIER):ENTIER
+	
+	DEBUT
+		SOMME<- nb1+nb2+nb3+nb4+nb5
+	
+	FIN FONCTION
+
+VAR
+	resultat,nb1,nb2,nb3,nb4,nb5:ENTIER
+
+DEBUT
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb1
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb2
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb3		
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb4
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb5
+	resultat<- SOMME(nb1,nb2,nb3,nb4,nb5)
+	ECRIRE"Le résultat est"+resultat
+FIN
+
+//exo4
+Algo: exercie_fonctions_et_procédure
+//but: tester la fonction somme
+//entree:saisir 5 nombre
+//srotis:afficher la somme des 5 nombres
+VAR
+	resultat,nb1,nb2,nb3,nb4,nb5:ENTIER
+
+PROCEDURE SOMME:ENTIER;
+	
+	DEBUT
+		resultat<-nb1+nb2+nb3+nb4+nb5
+		ECRIRE"Le résultat est"+resultat
+
+		
+	FINPROCEDURE
+
+
+DEBUT
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb1
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb2
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb3		
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb4
+	ECRIRE"veuillez saisir 1 nombre"
+	lire nb5
+	SOMME;
+	
+FIN
+
+//Exo 5
+//exo 5
+//but : marquer le nombre de voyelle
+//ENTREE : entrer une chaine de caractère
+//SORTIE : le nombre de voyelle 
+
+VAR
+    ent: ENTIER
+
+fonction nb_voyelle(mot:chaine):ENTIER
+var
+    car : caractere
+    i,cpt_voyelle : entier
+DEBUT
+    cpt_voyelle <- 0
+    for i:1 to ent do
+    debut
+        car <- EXTRACTION (mot,i)
+            si(car = 'a')ou (car = 'o') ou (car = 'u') ou (car = 'i') ou (car = 'e') ou (car = 'y')
+                ALORS cpt_voyelle <-- cpt_voyelle + 1
+    fin
+    nb_voyelle <-- cpt_voyelle
+FINFONCTION
+
+var
+mot : chaine
+
+debut
+    ecrire 'Veuillez entrer un mot !'
+    lire (mot)
+    ent <- LONGUEUR(mot)
+    ECRIRE  'Il y a' + nob_voyelle(mot)
+fin
+
+
+
+
+
+
+

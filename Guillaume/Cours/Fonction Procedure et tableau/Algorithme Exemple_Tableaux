@@ -1,0 +1,42 @@
+Algorithme Exemple_Tableaux
+
+CONST 
+
+	MAX<-50:entier
+
+VAR
+	
+	tab_entier:tableau [1..MAX] entier //tab_entier:tableau [0..MAX] entier
+	tab_caractere:tableau[1..MAX]caractere 
+	matrice_entier:tableau[1..MAX,1..MAX]entier
+
+	i,j:entier
+
+
+DEBUT
+
+	//Init tableau d'entiers avec 0
+	Pour i de 1 a MAX faire
+		tab_entier[i]<-0
+
+	//Init tableau cacateres avec a
+	Pour i de 1 a MAX faire
+		tab_caractere[i]<-'a'
+
+
+	Pour i de 1 a MAX faire
+		DEBUT
+			Pour j de 1 a MAX faire
+				DEBUT
+					matrice_entier[i,j]<-0
+				FIN
+		FIN		
+
+
+FIN
+
+
+
+
+
+

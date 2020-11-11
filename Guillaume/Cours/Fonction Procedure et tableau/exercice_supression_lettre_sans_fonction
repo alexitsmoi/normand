@@ -1,0 +1,26 @@
+ALGO:supression de lettre
+//BUT:Purger une lettre de la chaine de charactère
+//ENTREE:L'utilisateur entre une chaine de charactère
+//SORTIS:Chaine de charactère purger de la lettre demander 
+
+VAR
+	chaine_source,temp_chaine:chaine
+	car_a_sup,car_temp:caractere
+	ent,i:entier
+
+DEBUT
+	ECRIRE("Veuillez entrer un mot/une phrase")
+	LIRE(chaine_source)
+	ECRIRE("Veuillez saisir le caractere a supprimer")
+	LIRE(car_a_sup)
+	POUR i de 1 a ent FAIRE
+	DEBUR
+		SI(car_temps<-EXTRACTION(chaine_source,i)<>car_a_sup) 
+		ALORS
+			temp_chaine<-temp_chain+car_temp
+		FINSI
+	FINPOUR
+	ECRIRE(temp_chaine)
+FIN.
+
+
