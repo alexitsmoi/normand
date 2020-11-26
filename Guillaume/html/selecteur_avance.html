@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+<head><!--en tête de la pâge-->
+	<title>Selecteur avancé</title><!--en tête de la page-->
+	<meta charset="utf-8"><!--encodage de la page (gestion des caractères accentués)-->
+	<!--intégrer un fichier CSS externe-->
+	<link rel="stylesheet" type="text/css" href="..css/monstyle.css">
+	<!--Afficher une image dans l'onglet de sa page-->
+	<link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+	<style type="text/css">
+		/**{
+			border: solid;
+		}*/
+		/* on gère le style de la balise <em> a l'intérieur de la balise <h2>*/
+		h2 em{
+			color: red
+		}
+		/*on gère le style de la balise <em> a l'intérieur de la balise <h3>*/
+		h3 em{
+			color: yellow  
+		}
+		/*on gère le style de la balise <em>*/
+		em{
+			color: green
+		}
+		
+		h3+p{/*la première balise <p> après <h3> auras le style*/
+			color: pink
+		}
+		/*on gère le style des paragraphes avec l'attribut name*/
+		p[name]{
+			color: purple
+		}
+		/* on gère le style des liens avec l'attribut title(infobulle)*/
+		a[title]{
+			background-color: red
+		}
+		/* on gère le style des liens avec l'attribut title et la valeur précise infobulle)*/
+		a[title="infobulle"]{
+			background-color: purple
+		}
+		/* on gère le style des input avec l'attribut type et la valeur précise mail*/
+		input[type="email"]{
+		border: solid 1px red;
+		}
+		/* on gère le style des input avec l'attribut type et la valeur précise required*/
+		input[required]{
+			background-color: red
+		}
+		/* on gère le style des lien avec l'attribut title et la valeur souche infobulle*/
+		a[title*="infobulle"]{
+			background-color: pink
+		}
+
+
+	</style>
+</head>
+<body><!--corp de la page: contient les éléments affichés-->
+<hr>
+	<hr color="">
+	<header id="haut"><img src="images/logomini.png"><h1>GDESIGN</h1></header>
+	<hr color="">
+<hr>
+		<h1>Les sélécteurs avancés</h1>
+		<p>C'est ce qui permet de matcher entre le css et les éléments a styliser</p>
+	<section>
+		<h2>* : Est le sélécteur universel</h2>
+		<p>Le selecteur inverselle permet de selectionner un style a toute les balise sans excéption</p>
+	</section>
+	<section >
+			<h2>A B : une balise <em>incluse</em> dans une autre</h2>
+			<h3>A B : une balise <em>incluse</em> dans une autre</h3>
+			<em>A B : une balise incluse dans une autre</em>
+	</section>
+	<section>
+		<h3>A+B:Donne le style a la première balise B après A</h3>
+		
+		<p>At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.</p>
+
+		<p>At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.</p>
+	</section>
+	<section>
+		<h2>A[attribut] : une balise qui possède un attribut</h2>
+
+		<p name="paragraphe">At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.</p>
+
+		<p id="paragraphe">At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.</p>
+
+		<a href="https://www.google.com/" title="infobulles">Lien vers google</a>
+		<a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Lien vers wikipedia</a>
+	</section>
+	<section>
+		<h2>A[attribut="Valeur"] : une balise, un attribut et une valeur exacte</h2>
+		<a href="https://www.google.com/" title="infobulle">Lien vers google</a>
+		<a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" title="infobulle2">Lien vers wikipedia</a><br>
+		<label for="mail">Email : </label>
+		<input type="email" name="mail" placeholder="Saisir email"><br>
+		
+		<label for="texte">Nom : </label>
+		<input type="text" name="texte" placeholder="Saisir nom" required="">
+
+		<label for="texte">Prenom : </label>
+		<input type="text" name="texte" placeholder="Saisir prenom">
+
+	</section>
+	<section><header><h2>A[attribut*="Valeur"] : une balise, un attribut et une valeur</h2></header></section>
+
+	<a href="https://www.google.com/" title="infobulle">Lien vers google</a>
+	<a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" title="infobulle2">Lien vers wikipedia</a><br>
+
+
+
+
+
+
+
+
+
+<hr>
+<footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+<hr>
+</body>
+</html>

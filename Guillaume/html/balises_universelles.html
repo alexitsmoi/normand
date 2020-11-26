@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--ceci  n'est pas une balise mais un directive
+Indique la version de HTML utilisé: HTML5
+-->
+
+<!--ceci  est commentaire-->
+
+<!--Balise paires/ Impaires-->
+
+<html>
+<head><!--en tête de la pâge-->
+	<title>Balise_universelles</title><!--en tête de la page-->
+	<meta charset="utf-8"><!--encodage de la page (gestion des caractères accentués)-->
+	<!--intégrer un fichier CSS externe-->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<!--Afficher une image dans l'onglet de sa page-->
+	<link rel="icon" type="image/x-icon" href="../images/caramini.jpg" />
+	<style type="text/css">
+		.parblue{
+	color: blue
+		}
+		.grasitalique{
+			font-weight: bold; font-style: oblique;
+			border:solid 10px;border-radius: 25px;
+		}
+		.fondcouleur{
+			background-color: yellow
+		}
+	</style>
+</head>
+<body class="fondcouleur"><!--corp de la page: contient les éléments affichés-->
+<hr>
+	<hr color="">
+	<header id="haut"><img src="../images/logomini.png"><h1>GDESIGN</h1></header>
+	<hr color="">
+<hr>
+<!--permet de decouper une image pour dire que telle zone de l'image fais telle chose-->
+<h1>Balise universelles</h1>
+<h2>Les balises universelles
+Servent à appliquer un style de class ou id sur autre chose que des balises.</h2>
+<h3>Les balises universelles sont div/span</h3>
+<h3>Utilisation des div qui est une balise block saut de ligne automatique</h3>
+
+<!--<p class="test" style="color: black;">-->
+	<div>
+		Je me penche attendri sur les bois et les eaux,
+		Rêveur, grand-père aussi des fleurs et des oiseaux ;
+		J'ai la pitié sacrée et profonde des choses ;
+		J'empêche les enfants de maltraiter les roses ;
+		Je dis : N'effarez point la plante et l'animal ;
+		Riez sans faire peur, jouez sans faire mal.
+		Jeanne et Georges, fronts purs, prunelles éblouies,
+		Rayonnent au milieu des fleurs épanouies ;
+		<div class="parblue">
+		J'erre, sans le troubler, dans tout ce paradis ;
+		Je les entends chanter, je songe, et je me dis
+		Qu'ils sont inattentifs, dans leurs charmants tapages,
+		Au bruit sombre que font en se tournant les pages
+		Du mystérieux livre où le sort est écrit,
+		Et qu'ils sont loin du prêtre et près de Jésus-Christ.
+		</div>
+	</div>
+</p>
+<h3>Utilisation des span qui est une balise block donc le  saut de ligne n'est pas automatique </h3>
+
+<!--<p class="test" style="color: black;">-->
+<p><pre>
+Aux champs:
+<span>Je me penche attendri sur les bois et les eaux,</span>
+Rêveur, grand-père aussi des fleurs et des oiseaux ;
+J'ai la pitié sacrée et profonde des choses ;
+<span class="parblue">J'empêche les enfants de maltraiter les roses ;</span>
+Je dis : N'effarez point la plante et l'animal ;
+Riez sans faire peur, jouez sans faire mal.
+Jeanne et Georges, fronts purs, prunelles éblouies,
+Rayonnent au milieu des fleurs épanouies ;
+<span class="parblue">J'erre, sans le troubler, dans tout ce paradis ;
+Je les entends chanter, je songe, et je me dis
+Qu'ils sont inattentifs, dans leurs charmants tapages,
+Au bruit sombre que font en se tournant les pages
+Du mystérieux livre où le sort est écrit,
+Et qu'ils sont loin du prêtre et près de Jésus-Christ.</span>
+</p></pre>
+
+<p><pre>
+<span class="grasitalique">Aux champs:</span>
+<span>Je me penche attendri sur les bois et les eaux,</span>
+Rêveur, grand-père aussi des fleurs et des oiseaux ;
+J'ai la pitié sacrée et profonde des choses ;
+<span class="parblue">J'empêche les enfants de maltraiter les roses ;</span>
+Je dis : N'effarez point la plante et l'animal ;
+Riez sans faire peur, jouez sans faire mal.
+Jeanne et Georges, fronts purs, prunelles éblouies,
+Rayonnent au milieu des fleurs épanouies ;
+<span class="parblue">J'erre, sans le troubler, dans tout ce paradis ;
+Je les entends chanter, je songe, et je me dis
+Qu'ils sont inattentifs, dans leurs charmants tapages,
+Au bruit sombre que font en se tournant les pages
+Du mystérieux livre où le sort est écrit,
+Et qu'ils sont loin du prêtre et près de Jésus-Christ.</span>
+</p></pre>
+
+
+
+
+
+
+<hr>
+<footer><a href="http://copyright.be" target="_blank">Copyright © 2020 Sémantique_structurer - Tous droits réservés</a><br>Edel-Fix<br>Guillaume<br><strong>Contacte:</strong>g.edel-fix@ludus-academie.com</footer>
+<hr>
+</body>
+</html>
